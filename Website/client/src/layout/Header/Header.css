@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+  --nav-color: #151048;
+  --primary-light-color: #0C98E2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: var(--nav-color);
+    color: #fff;
+    height: 70px;
+    border-bottom: 1px dotted #fff;
+    z-index: 1000;
+}
+
+.navContainer {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar .logo {
+    cursor: pointer;
+}
+  
+.navbar ul {
+    display: flex;
+    list-style-type: none;  
+}
+  
+.navbar a {
+    text-decoration: none;
+    color: #FFF;
+    padding: 10px;
+    margin: 0;
+    transition: 0.2s;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+  
+.navbar .link:hover {
+    border-bottom: 2px solid #fff;
+}
+  
+.navbar .flex {
+    justify-content: space-between;
+}
+
+@media(max-width: 900px){
+    body {
+        overflow-y: visible;
+    }
+    .navbar {
+        height: 110px;
+    }
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        padding: 15px;
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 45px;
+        margin-bottom: 10px;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+    }
+}  

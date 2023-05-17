@@ -1,0 +1,195 @@
+:root {
+  --auth-color: #2827cc;
+  --auth-dark: #120e43;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    #2827cc 0%,
+    #2827cc 56.49%,
+    #120e43 56.49%,
+    #120e43 100%
+  );
+}
+
+.login-container {
+  width: 900px;
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 1px 1px 15px var(--auth-color), 2px 2px 25px var(--auth-dark);
+}
+
+.login-container .formImg {
+  height: 100%;
+  background: var(--auth-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: 0.7s;
+}
+
+.login-container .formImg.signin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 550px;
+  transition-delay: 0.7s;
+}
+
+.formImg h2,
+h3 {
+  color: #fff;
+  text-align: center;
+}
+
+.formImg img {
+  width: 50%;
+}
+
+.login-container .form {
+  height: 100%;
+  background: var(--auth-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 0;
+  color: #fff;
+  transition: 0.7s;
+}
+
+.login-container .form.signin {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  transition-delay: 0.7s;
+}
+
+.form.signin .forgot:hover {
+  cursor: pointer;
+  text-shadow: 0 0 2px #fff;
+}
+
+.form p span {
+  border: 1px solid #fff;
+  background: #fff;
+  color: var(--auth-dark);
+  margin-left: 5px;
+  padding: 2px 5px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.form p span:hover {
+  box-shadow: 0 0 5px #fff;
+}
+
+/* Errors */
+.errorText {
+  color: var(--error-color);
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.errorlogin-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.errorlogin-container div,
+.hEmaillogin-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorlogin-container div span {
+  align-self: flex-start;
+  margin-left: 7px;
+}
+
+.hEmaillogin-container div {
+  align-self: flex-start;
+  margin-left: 50px;
+}
+
+/* Utilities */
+.form.signin input[type="text"],
+.form.signin input[type="email"],
+.form.signin input[type="password"] {
+  width: 250px;
+  padding: 5px 10px;
+  background: none;
+  outline: none;
+  border: 2px solid var(--auth-color);
+  border-radius: 10px;
+  font-size: 1.1rem;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.form.signin input::placeholder {
+  color: #c1c1c1;
+}
+
+.form.signin input:focus {
+  transform: scaleX(1.05);
+}
+
+.myBtn {
+  width: 200px;
+  padding: 5px;
+  background: var(--auth-color);
+  border: 2px solid var(--auth-color);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  outline: none;
+  /* transition: .5s; */
+}
+
+.myBtn:hover {
+  box-shadow: 0 0 10px var(--auth-color);
+}
+
+.myBtn:active {
+  transform: translateY(2px);
+}
+
+.is-invalid {
+  border: 1px solid #e21717;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+  .mainContainer {
+    position: fixed;
+    width: 100%;
+  }
+  .login-container {
+    width: 350px;
+    height: 500px;
+    margin-bottom: 100px;
+  }
+  .formImg.signin {
+    display: none;
+  }
+}
