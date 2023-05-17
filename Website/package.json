@@ -1,7 +1,7 @@
 {
-  "name": "quizzy",
+  "name": "deprescan",
   "version": "1.0.0",
-  "description": "A Quiz Making App",
+  "description": "Depression Detection",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
