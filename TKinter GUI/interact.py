@@ -34,7 +34,7 @@ class data_store:
     student_phone = ""
     student_gender = ""
     flag= 0
-    admin_mail = "siddhantindave@icloud.com"
+    admin_mail = "yabdurrahman478@gmail.com"
     student_mail = ""
     name_flag = 0
     phq_questions = [
@@ -369,7 +369,7 @@ class App(customtkinter.CTk):
                 if img1_reaction == 'happy':
                     data_store.enthu_val += 1
                 else:
-                    data_store.dep_anx_val += 1
+                    data_store.dep_anx_val += 2
                 cv2.destroyAllWindows()
                 data_store.flag += 1
                 self.label_info_1.set_text("Type and enter OK to continue.")
@@ -432,7 +432,7 @@ class App(customtkinter.CTk):
                 if img3_reaction == 'happy':
                     data_store.enthu_val += 1
                 else:
-                    data_store.dep_anx_val += 1
+                    data_store.dep_anx_val += 2
                 cv2.destroyAllWindows()
                 data_store.flag += 1
                 self.label_info_1.set_text("Type and enter OK to continue.")
@@ -442,7 +442,7 @@ class App(customtkinter.CTk):
             self.label_info_1.set_text("Playing Video")
             vid1 = vlc.MediaPlayer("vid_samples/1.mp4")
             vid1.play()
-            time.sleep(32)
+            time.sleep(17)
             vid1.stop()
             import img_capture as ic
             import fer_img
@@ -461,7 +461,7 @@ class App(customtkinter.CTk):
             self.label_info_1.set_text("Playing Video")
             vid1 = vlc.MediaPlayer("vid_samples/2.mp4")
             vid1.play()
-            time.sleep(17)
+            time.sleep(23)
             vid1.stop()
             import img_capture as ic
             import fer_img
@@ -480,7 +480,7 @@ class App(customtkinter.CTk):
             self.label_info_1.set_text("Playing Video")
             vid1 = vlc.MediaPlayer("vid_samples/3.mp4")
             vid1.play()
-            time.sleep(59)
+            time.sleep(23)
             vid1.stop()
             import img_capture as ic
             import fer_img
@@ -551,6 +551,7 @@ class App(customtkinter.CTk):
             data_store.opti_val += 1
             data_store.flag += 1
             self.label_info_1.set_text(data_store.phq_questions[data_store.flag - 13])
+            playaudio("phq_intro.mp3")
             playaudio("phq1.mp3")
             user=""
             self.qOptions.set("")
@@ -564,6 +565,7 @@ class App(customtkinter.CTk):
             data_store.response3 = "No"
             data_store.flag += 1
             self.label_info_1.set_text(data_store.phq_questions[data_store.flag - 13])
+            playaudio("phq_intro.mp3")
             playaudio("phq1.mp3")
             user=""
             self.qOptions.set("")
@@ -751,8 +753,8 @@ def studmail():
                           "response2": data_store.response2,
                           "question3": "Do you believe that you are in control of your life?",
                           "response3": data_store.response3,
-                          "enthusiasm":dep_anx_score,
-                          "depression score":enthu_score,
+                          "enthusiasm": enthu_score,
+                          "depression score": dep_anx_score,
                           "optimisum":opti_score,
                           "phqQuestions": data_store.phq_questions,
                           "phqResponses": data_store.phq_responses,
