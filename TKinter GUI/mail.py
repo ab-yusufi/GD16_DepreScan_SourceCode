@@ -8,14 +8,14 @@ from email.mime.base import MIMEBase
 from email.mime.image import MIMEImage
 from email.mime.text import MIMEText
 import os
-def main(sendto):
+def main(sendto="yabdurrahman478@gmail.com"):
 
     try:
         emailfrom = "yabdurrahman478@gmail.com"
         emailto = sendto
         fileToSend = "example.pdf"
         username = "yabdurrahman478@gmail.com"
-        password = "uqwcoifamhzvgmam"
+        password = "omokratrlwbqmzvn"
 
         msg = MIMEMultipart()
         msg["From"] = emailfrom

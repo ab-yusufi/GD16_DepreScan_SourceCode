@@ -1,0 +1,11 @@
+,path,emotion
+0,data/emodb/wav\03a01Nc.wav,neutral
+1,data/emodb/wav\03a04Fd.wav,happy
+2,data/emodb/wav\03a07Nc.wav,neutral
+3,data/emodb/wav\03b10Nc.wav,neutral
+4,data/emodb/wav\08a07Na.wav,neutral
+5,data/emodb/wav\08b01Fe.wav,happy
+6,data/emodb/wav\08b02Ff.wav,happy
+7,data/emodb/wav\08b03Fe.wav,happy
+8,data/emodb/wav\09b02Na.wav,neutral
+9,data/emodb/wav\11b02Fd.wav,happy
